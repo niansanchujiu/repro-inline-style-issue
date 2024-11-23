@@ -35,10 +35,10 @@ module.exports = {
       },
       verbose: true,
       minify: {
-        removeComments: true,       // 移除 HTML 注释
-        collapseWhitespace: false,  // 删除多余的空格和换行
-        minifyJS: true,             // 压缩 HTML 中的内联 JavaScript 代码
-        minifyCSS: true,            // 压缩 HTML 中的内联 CSS
+        removeComments: true,       
+        collapseWhitespace: false,  
+        minifyJS: true,            
+        minifyCSS: true,            
       },
       preprocessor: 'eta',
       preprocessorOptions: {
@@ -77,15 +77,15 @@ module.exports = {
               postcssOptions: {
                 plugins: [
                     require('postcss-preset-env')({
-                      stage: 1,                                       // 启用较稳定的 CSS 草案特性
+                      stage: 1,                                       
                       autoprefixer: {
-                        grid: true,                                   // 启用 CSS Grid 的前缀
-                        flexbox: 'no-2009',                           // 禁用早期 Flexbox 前缀
+                        grid: true,                                  
+                        flexbox: 'no-2009',                           
                       },
-                      browsers: ["> 1%", "last 3 versions", "ie 11"],  // 目标浏览器
+                      browsers: ["> 1%", "last 3 versions", "ie 11"], 
                       features: {
-                        'nesting-rules': true,                        // 启用嵌套规则
-                        'custom-media-queries': true,                 // 启用自定义媒体查询
+                        'nesting-rules': true,                       
+                        'custom-media-queries': true,            
                       },
                     }),
                     require('cssnano')({ preset: 'default' }),
